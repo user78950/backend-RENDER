@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.env.*
+movie-app/\
+!.env.example
+.DS_Store
