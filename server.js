@@ -8,7 +8,7 @@ const app = express();
 // TODO 1: PORT 환경 변수를 읽고, 값이 없으면 4000을 사용합니다.
 const port = Number(process.env.PORT || 4000);
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: process.env.CLIENT_ORIGIN }));
 app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/movies", moviesRouter);
